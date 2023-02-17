@@ -6,7 +6,7 @@
 #    By: kde-la-c <kde-la-c@student.42madrid>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/11 10:57:13 by kde-la-c          #+#    #+#              #
-#    Updated: 2023/01/11 10:57:17 by kde-la-c         ###   ########.fr        #
+#    Updated: 2023/02/17 15:15:10 by kde-la-c         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -45,19 +45,17 @@ SRC			= ft_isalnum.c\
 			ft_putstr_fd.c\
 			ft_putendl_fd.c\
 			ft_putnbr_fd.c\
-
-BSRC		= ft_lstnew_bonus.c\
-			ft_lstadd_front_bonus.c\
-			ft_lstsize_bonus.c\
-			ft_lstlast_bonus.c\
-			ft_lstadd_back_bonus.c\
-			ft_lstdelone_bonus.c\
-			ft_lstclear_bonus.c\
-			ft_lstiter_bonus.c\
-			ft_lstmap_bonus.c\
+			ft_lstnew.c\
+			ft_lstadd_front.c\
+			ft_lstsize.c\
+			ft_lstlast.c\
+			ft_lstadd_back.c\
+			ft_lstdelone.c\
+			ft_lstclear.c\
+			ft_lstiter.c\
+			ft_lstmap.c\
 
 OBJS		= $(SRC:%.c=%.o)
-BOBJS		= $(BSRC:%.c=%.o)
 INCLUDE		= libft.h
 CC			= gcc
 CFLAGS		= -Wall -Wextra -Werror
@@ -72,12 +70,8 @@ $(NAME):	$(OBJS) $(INCLUDE)
 			@$(AR) $(AFLAGS) $(NAME) $(OBJS) $(INCLUDE)
 			@echo "\033[0;32m--- Library compiled successfully! ---\033[0m"
 
-bonus:		$(BOBJS) $(NAME)
-			@$(AR) $(AFLAGS) $(NAME) $(BOBJS)
-			@echo "\033[0;32m--- Bonus files added successfully! ---\033[0m"
-
 clean:
-			$(RM) $(RFLAGS) $(OBJS) $(BOBJS)
+			$(RM) $(RFLAGS) $(OBJS)
 			@echo "\033[0;32m--- Objects cleaned successfully! ---\033[0m"
 
 fclean:		clean
@@ -86,4 +80,4 @@ fclean:		clean
 
 re:			fclean all
 
-.PHONY:		all clean fclean re bonus
+.PHONY:		all clean fclean re
