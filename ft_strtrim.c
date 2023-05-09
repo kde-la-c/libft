@@ -65,12 +65,10 @@ static int	getlen(const char *str, const char *set)
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
-	int					i;
 	unsigned int		start;
 	unsigned int		len;
 	char				*ret;
 
-	i = 0;
 	if (!s1)
 		return ((char *)s1);
 	start = getstart(s1, set);
