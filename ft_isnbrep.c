@@ -12,27 +12,28 @@
 
 #include "libft.h"
 
-int	ft_isnbrep(void *array, int len)
+int	ft_isnbrep(int array[], int len)
 {
-	int					i;
-	// int					j;
-	// long long	set[len];
-	long long	*arr;
+	int	i;
+	int	*arr;
 
 	i = 0;
-	arr = (long long *)array;
+	arr = (int *)array;
 	// set[0] = arr[0];
 	while (i < len)
 	{
-		printf("%llu\n", arr[i++]);
+		printf("%u\n", arr[i++]);
 	}
 	return (0);
 }
 
 int main()
 {
-	long arr[4] = {444, 444, 0};
+	int	len = 7;
+	int arr[10] = {444, 444, 7, 198273, 78, 6, 0000};
 
-	printf("%i\n", ft_isnbrep(arr, 4));
+	printf("ret :%i\n", ft_isnbrep(arr, len));
+	// printf("ret :%i\n", arr[4]);
+	// printf("ret :%i\n", arr[5]);
 	return 0;
 }
