@@ -15,25 +15,22 @@
 int	ft_isnbrep(int array[], int len)
 {
 	int	i;
-	int	*arr;
+	int	j;
+	int	*set;
 
 	i = 0;
-	arr = (int *)array;
-	// set[0] = arr[0];
+	set = (int *)malloc(len * sizeof(int));
+	set[0] = array[0];
 	while (i < len)
 	{
-		printf("%u\n", arr[i++]);
+		j = 0;
+		while (set[j] && j < i)
+			if (array[i] != set[j++])
+				set[i] = array[i];
+			else
+				return (1);
+		i++;
 	}
+	free(set);
 	return (0);
-}
-
-int main()
-{
-	int	len = 7;
-	int arr[10] = {444, 444, 7, 198273, 78, 6, 0000};
-
-	printf("ret :%i\n", ft_isnbrep(arr, len));
-	// printf("ret :%i\n", arr[4]);
-	// printf("ret :%i\n", arr[5]);
-	return 0;
 }
