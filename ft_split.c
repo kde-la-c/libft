@@ -29,14 +29,6 @@ static int	countsubstr(char const *s, char c)
 	return (i);
 }
 
-void	*ft_free(char **arr, int i)
-{
-	while (i >= 0 && arr[i])
-		free(arr[i--]);
-	free(arr);
-	return (NULL);
-}
-
 char	**ft_split(char const *s, char c)
 {
 	int		i;
@@ -57,7 +49,7 @@ char	**ft_split(char const *s, char c)
 		else if (ft_strlen(&s[j]))
 			ret[i] = ft_substr(s, j, ft_strlen(s) - j);
 		if (!ret[i])
-			return (ft_free(ret, i - 1));
+			return (ft_dfree((void **)ret, i - 1), NULL);
 		j += ft_strlen(ret[i++]);
 	}
 	ret[i] = NULL;
