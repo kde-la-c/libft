@@ -49,7 +49,7 @@ char	**ft_split(char const *s, char c)
 		else if (ft_strlen(&s[j]))
 			ret[i] = ft_substr(s, j, ft_strlen(s) - j);
 		if (!ret[i])
-			return (ft_dfree((void **)ret, i - 1), NULL);
+			return (ft_dfree((void **)ret), NULL);
 		j += ft_strlen(ret[i++]);
 	}
 	ret[i] = NULL;

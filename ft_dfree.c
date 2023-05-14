@@ -12,9 +12,19 @@
 
 #include "libft.h"
 
-void	ft_dfree(void **arr, int i)
+/* void	ft_dfree(void **arr, int i)
 {
 	while (i >= 0 && arr[i])
 		free(arr[i--]);
+	free(arr);
+} */
+
+void	ft_dfree(void **arr)
+{
+	int	i;
+
+	i = 0;
+	while (arr[i])
+		free(arr[i++]);
 	free(arr);
 }
