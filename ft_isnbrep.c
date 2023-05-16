@@ -27,8 +27,8 @@ int	ft_isnbrep(int array[], int len)
 		while (set[j] && j < i)
 			if (array[i] != set[j++])
 				set[i] = array[i];
-			else
-				return (1);
+		else
+			return (1);
 		i++;
 	}
 	free(set);

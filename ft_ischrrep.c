@@ -27,8 +27,8 @@ int	ft_ischrrep(char *str)
 		while (set[j] && j < i)
 			if (str[i] != set[j++])
 				set[i] = str[i];
-			else
-				return (1);
+		else
+			return (1);
 		i++;
 	}
 	free(set);
