@@ -12,13 +12,6 @@
 
 #include "libft.h"
 
-/* void	ft_dfree(void **arr, int i)
-{
-	while (i >= 0 && arr[i])
-		free(arr[i--]);
-	free(arr);
-} */
-
 void	ft_dfree(void **arr)
 {
 	int	i;
