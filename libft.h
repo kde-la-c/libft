@@ -76,4 +76,6 @@ void	ft_putnbr_base_fd(int nbr, char *base, int fd);
 int		ft_ischrrep(char *str);
 void	ft_dfree(void **arr);
 
+// t_list	*ft_lstdup(t_list *lst, size_t contsize);
+
 #endif
