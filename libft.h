@@ -25,6 +25,15 @@ typedef struct s_list
 	struct s_list	*next;
 }					t_list;
 
+typedef	struct s_count
+{
+	long	i;
+	long	j;
+	long	k;
+	long	l;
+	long	m;
+}		t_count;
+
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);
 int		ft_isalnum(int c);
