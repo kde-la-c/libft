@@ -75,7 +75,6 @@ int		ft_isnbrep(int array[], int len);
 void	ft_putnbr_base_fd(int nbr, char *base, int fd);
 int		ft_ischrrep(char *str);
 void	ft_dfree(void **arr);
-
-// t_list	*ft_lstdup(t_list *lst, size_t contsize);
+t_list	*ft_lstgetnode(t_list *lst, int node);
 
 #endif
