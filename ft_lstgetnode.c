@@ -16,7 +16,7 @@ t_list	*ft_lstgetnode(t_list *lst, int node)
 {
 	if (ft_lstsize(lst) < node)
 		return (NULL);
-	while (lst && node >= 0)
+	while (lst && node > 0)
 	{
 		lst = lst->next;
 		node--;
