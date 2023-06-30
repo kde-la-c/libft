@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-int	ft_isnbrep(int array[], int len)
+int	ft_isnbrep(int *array, int len)
 {
 	int	i;
 	int	j;

@@ -80,7 +80,7 @@ void	ft_lstclear(t_list **lst, void (*del)(void *));
 void	ft_lstiter(t_list *lst, void (*f)(void *));
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 
-int		ft_isnbrep(int array[], int len);
+int		ft_isnbrep(int *array, int len);
 void	ft_putnbr_base_fd(int nbr, char *base, int fd);
 int		ft_ischrrep(char *str);
 void	ft_dfree(void **arr);
