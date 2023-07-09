@@ -25,7 +25,7 @@ typedef struct s_list
 	struct s_list	*next;
 }					t_list;
 
-typedef	struct s_count
+typedef struct s_count
 {
 	long	i;
 	long	j;
