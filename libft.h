@@ -18,6 +18,11 @@
 # include <unistd.h>
 # include <stdlib.h>
 # include <stdint.h>
+# include <fcntl.h>
+
+# ifndef BUFFER_SIZE
+#  define BUFFER_SIZE 8
+# endif
 
 typedef struct s_list
 {
@@ -85,5 +90,7 @@ void	ft_putnbr_base_fd(int nbr, char *base, int fd);
 int		ft_ischrrep(char *str);
 void	ft_dfree(void **arr);
 t_list	*ft_lstgetnode(t_list *lst, int node);
+
+char	*get_next_line(int fd);
 
 #endif

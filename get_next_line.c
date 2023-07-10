@@ -1,0 +1,116 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   get_next_line.c                                    :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: kde-la-c <kde-la-c@student.42madrid>       +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/02/04 23:40:01 by kde-la-c          #+#    #+#             */
+/*   Updated: 2023/02/04 23:40:04 by kde-la-c         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
+
+char	*get_start(char *buff, int *n)
+{
+	char	*ret;
+	int		nlen;
+
+	if (!ft_strchr(buff, '\n'))
+		return (buff);
+	nlen = ft_strchr(buff, '\n') - (buff - 1);
+	if (nlen == (int)ft_strlen(buff))
+	{
+		*n = 2;
+		return (buff);
+	}
+	ret = ft_substr(buff, 0, nlen);
+	*n = 1;
+	return (ret);
+}
+
+char	*ft_strjoin_f1(char const *s1, char const *s2)
+{
+	int		i;
+	int		j;
+	char	*ret;
+	size_t	totlen;
+
+	i = 0;
+	j = 0;
+	totlen = ft_strlen(s1) + ft_strlen(s2);
+	ret = malloc(sizeof(char) * totlen + 1);
+	if (!ret)
+		return (NULL);
+	while (s1[i])
+	{
+		ret[i] = s1[i];
+		i++;
+	}
+	while (s2[j])
+	{
+		ret[i + j] = s2[j];
+		j++;
+	}
+	ret[i + j] = 0;
+	free((char *) s1);
+	return (ret);
+}
+
+char	*read_line(char *buff, int fd, int *n)
+{
+	char		*ret;
+	char		*tmp;
+	ssize_t		bsize;
+
+	ret = NULL;
+	bsize = 1;
+	while (!*n && bsize > 0)
+		if (!*buff)
+			bsize = read(fd, buff, BUFFER_SIZE);
+	else
+	{
+		tmp = get_start(buff, n);
+		if (!ret)
+			ret = ft_strdup(tmp);
+		else
+			ret = ft_strjoin_f1(ret, tmp);
+		if (!*n)
+			ft_bzero(buff, BUFFER_SIZE + 1);
+	}
+	if (*n == 1)
+		free(tmp);
+	if (bsize == -1)
+		*n = bsize;
+	return (ret);
+}
+
+char	*get_next_line(int fd)
+{
+	char		*ret;
+	char		*tmp;
+	char		buff[BUFFER_SIZE + 1];
+	static char	rest[BUFFER_SIZE];
+	int			n;
+
+	if (BUFFER_SIZE <= 0)
+		return (NULL);
+	ft_bzero(buff, BUFFER_SIZE + 1);
+	ret = NULL;
+	n = 0;
+	if (rest[0])
+	{
+		ft_memmove(buff, rest, ft_strlen(rest));
+		ft_bzero(rest, ft_strlen(rest));
+	}
+	ret = read_line(buff, fd, &n);
+	if (n == 1)
+	{
+		tmp = ft_strchr(buff, '\n') + 1;
+		ft_memmove(rest, tmp, ft_strlen(tmp));
+	}
+	if (n == -1)
+		return (free(ret), NULL);
+	return (ret);
+}
