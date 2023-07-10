@@ -12,24 +12,26 @@
 
 #include "libft.h"
 
-void	ft_putnbr_base_fd(int nbr, char *base, int fd)
+int	ft_putnbr_base_fd(int nbr, char *base, int fd)
 {
-	int		blen;
+	int	ret;
+	int	blen;
 
+	ret = 0;
 	blen = ft_strlen(base);
 	if (blen < 2 || ft_ischrrep(base))
-		return ;
+		return (0);
 	if (nbr < 0)
 	{
 		nbr *= -1;
-		write(fd, "-", 1);
+		ret += write(fd, "-", 1);
 	}
 	else if (nbr < blen)
-		write(fd, &base[nbr], 1);
+		ret += write(fd, &base[nbr], 1);
 	else if (nbr >= blen)
 	{
-		ft_putnbr_base_fd(nbr / blen, base, fd);
-		ft_putnbr_base_fd(nbr % blen, base, fd);
+		ret += ft_putnbr_base_fd(nbr / blen, base, fd);
+		ret += ft_putnbr_base_fd(nbr % blen, base, fd);
 	}
-	return ;
+	return (ret);
 }

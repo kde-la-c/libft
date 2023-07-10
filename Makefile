@@ -60,7 +60,11 @@ SRC			= ft_isalnum.c\
 			ft_dfree.c\
 			ft_lstgetnode.c\
 			\
-			get_next_line.c
+			get_next_line.c\
+			\
+			ft_putnbru_base_fd.c\
+			ft_putnbrul_base_fd.c\
+			ft_printf.c
 OBJS		= $(SRC:%.c=%.o)
 INCLUDE		= libft.h
 CC			= gcc
