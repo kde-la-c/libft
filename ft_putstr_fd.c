@@ -14,9 +14,6 @@
 
 int	ft_putstr_fd(char *s, int fd)
 {
-	int	ret;
-
-	ret = 0;
 	if (!s)
 		return (0);
 	else
