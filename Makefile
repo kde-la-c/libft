@@ -59,6 +59,7 @@ SRC			= ft_isalnum.c\
 			ft_putnbr_base_fd.c\
 			ft_dfree.c\
 			ft_lstgetnode.c\
+			ft_lstdelnext.c\
 			\
 			get_next_line.c\
 			\
