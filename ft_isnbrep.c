@@ -20,6 +20,8 @@ int	ft_isnbrep(int *array, int len)
 
 	i = 0;
 	set = (int *)malloc(len * sizeof(int));
+	if (!set)
+		return (-1);
 	set[0] = array[0];
 	while (i < len)
 	{
@@ -28,7 +30,7 @@ int	ft_isnbrep(int *array, int len)
 			if (array[i] != set[j++])
 				set[i] = array[i];
 		else
-			return (1);
+			return (free(set), 1);
 		i++;
 	}
 	free(set);
