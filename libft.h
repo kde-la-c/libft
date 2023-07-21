@@ -40,6 +40,12 @@ typedef struct s_count
 	long	m;
 }		t_count;
 
+typedef struct s_args
+{
+	int		argc;
+	char	**argv;
+}		t_args;
+
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);
 int		ft_isalnum(int c);
@@ -92,6 +98,7 @@ int		ft_ischrrep(char *str);
 void	ft_dfree(void **arr);
 t_list	*ft_lstgetnode(t_list *lst, int node);
 void	ft_lstdelnext(t_list **lst, void (*del)(void *));
+int		ft_countlines(int fd);
 
 char	*get_next_line(int fd);
 
