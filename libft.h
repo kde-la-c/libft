@@ -29,7 +29,7 @@ typedef struct s_list
 {
 	void			*content;
 	struct s_list	*next;
-}					t_list;
+}	t_list;
 
 typedef struct s_count
 {
@@ -38,19 +38,19 @@ typedef struct s_count
 	long	k;
 	long	l;
 	long	m;
-}		t_count;
+}	t_count;
 
 typedef struct s_args
 {
 	int		argc;
 	char	**argv;
-}		t_args;
+}	t_args;
 
 typedef struct s_cords
 {
 	int	x;
 	int	y;
-}		t_cords;
+}	t_cords;
 
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);
