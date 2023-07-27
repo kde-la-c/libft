@@ -61,6 +61,7 @@ SRC			= ft_isalnum.c\
 			ft_lstgetnode.c\
 			ft_lstdelnext.c\
 			ft_countlines.c\
+			ft_mathei.c\
 			\
 			get_next_line.c\
 			\

@@ -99,6 +99,7 @@ void	ft_dfree(void **arr);
 t_list	*ft_lstgetnode(t_list *lst, int node);
 void	ft_lstdelnext(t_list **lst, void (*del)(void *));
 int		ft_countlines(int fd);
+size_t	ft_mathei(void **mat);
 
 char	*get_next_line(int fd);
 
