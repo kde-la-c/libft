@@ -1,23 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_mathei.c                                        :+:      :+:    :+:   */
+/*   ft_initcount.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kde-la-c <kde-la-c@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/07/26 23:04:43 by kde-la-c          #+#    #+#             */
-/*   Updated: 2023/07/26 23:05:03 by kde-la-c         ###   ########.fr       */
+/*   Created: 2023/07/27 12:35:41 by kde-la-c          #+#    #+#             */
+/*   Updated: 2023/07/27 12:35:56 by kde-la-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_mathei(void **mat)
+t_count	ft_initcount(long i)
 {
-	size_t	i;
+	t_count	c;
 
-	i = 0;
-	while (mat[i])
-		i++;
-	return (i);
+	c.i = i;
+	c.j = i;
+	c.k = i;
+	c.l = i;
+	c.m = i;
+	return (c);
 }

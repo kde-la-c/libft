@@ -101,6 +101,7 @@ void	ft_lstdelnext(t_list **lst, void (*del)(void *));
 int		ft_countlines(int fd);
 long	ft_atol(const char *str);
 size_t	ft_mathei(void **mat);
+t_count	ft_initcount(long i);
 
 char	*get_next_line(int fd);
 
