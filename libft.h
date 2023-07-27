@@ -46,6 +46,12 @@ typedef struct s_args
 	char	**argv;
 }		t_args;
 
+typedef struct s_cords
+{
+	int	x;
+	int	y;
+}		t_cords;
+
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);
 int		ft_isalnum(int c);
@@ -101,7 +107,6 @@ void	ft_lstdelnext(t_list **lst, void (*del)(void *));
 int		ft_countlines(int fd);
 long	ft_atol(const char *str);
 size_t	ft_mathei(void **mat);
-t_count	ft_initcount(long i);
 
 char	*get_next_line(int fd);
 
