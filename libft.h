@@ -48,8 +48,8 @@ typedef struct s_args
 
 typedef struct s_cords
 {
-	int	x;
-	int	y;
+	int	r;
+	int	c;
 }	t_cords;
 
 int		ft_isalpha(int c);
