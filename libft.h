@@ -44,6 +44,7 @@ typedef struct s_args
 {
 	int		argc;
 	char	**argv;
+	char	**envp;
 }	t_args;
 
 typedef struct s_cords
