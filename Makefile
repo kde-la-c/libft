@@ -63,6 +63,7 @@ SRC			= ft_isalnum.c\
 			ft_countlines.c\
 			ft_atol.c\
 			ft_mathei.c\
+			ft_strjoin_f1.c\
 			\
 			get_next_line.c\
 			\
