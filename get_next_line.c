@@ -30,34 +30,6 @@ char	*get_start(char *buff, int *n)
 	return (ret);
 }
 
-char	*ft_strjoin_f1(char const *s1, char const *s2)
-{
-	int		i;
-	int		j;
-	char	*ret;
-	size_t	totlen;
-
-	i = 0;
-	j = 0;
-	totlen = ft_strlen(s1) + ft_strlen(s2);
-	ret = malloc(sizeof(char) * totlen + 1);
-	if (!ret)
-		return (NULL);
-	while (s1[i])
-	{
-		ret[i] = s1[i];
-		i++;
-	}
-	while (s2[j])
-	{
-		ret[i + j] = s2[j];
-		j++;
-	}
-	ret[i + j] = 0;
-	free((char *) s1);
-	return (ret);
-}
-
 char	*read_line(char *buff, int fd, int *n)
 {
 	char		*ret;
