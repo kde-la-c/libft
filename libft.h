@@ -22,7 +22,7 @@
 # include <stdarg.h>
 
 # ifndef BUFFER_SIZE
-#  define BUFFER_SIZE 8
+#  define BUFFER_SIZE 1
 # endif
 
 typedef struct s_list
@@ -115,5 +115,6 @@ char	*get_next_line(int fd);
 int		ft_putnbru_base_fd(unsigned int nbr, char *base, int fd);
 int		ft_putnbrul_base_fd(unsigned long long nbr, char *base, int fd);
 int		ft_printf(const char *str, ...);
+int		ft_fdprintf(int fd, const char *str, ...);
 
 #endif

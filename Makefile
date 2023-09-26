@@ -69,7 +69,8 @@ SRC			= ft_isalnum.c\
 			\
 			ft_putnbru_base_fd.c\
 			ft_putnbrul_base_fd.c\
-			ft_printf.c
+			ft_printf.c\
+			ft_fdprintf.c
 OBJS		= $(SRC:%.c=%.o)
 INCLUDE		= libft.h
 CC			= gcc
