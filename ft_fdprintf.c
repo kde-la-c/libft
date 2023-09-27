@@ -41,8 +41,8 @@ int	putarg(va_list ap, char c, int fd)
 		return (ft_putstr_fd(va_arg(ap, char *), fd));
 	else if (c == 'p')
 		if (ft_putstr_fd("0x", fd) == 2)
-			return (ft_putnbrul_base_fd(va_arg(ap, long), "0123456789abcdef", fd)
-				+ 2);
+			return (ft_putnbrul_base_fd(va_arg(ap, long),
+					"0123456789abcdef", fd) + 2);
 	else
 		return (-1);
 	else if (c == 'd' || c == 'i')
