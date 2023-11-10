@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-void	*ft_clearptrs(void *ptr, t_list *ret, void (*del)(void *))
+static void	*ft_clearptrs(void *ptr, t_list *ret, void (*del)(void *))
 {
 	del(ptr);
 	if (ret)

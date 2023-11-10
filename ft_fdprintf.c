@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-int	nbargs(char *str)
+static int	nbargs(char *str)
 {
 	int	i;
 	int	n;
@@ -33,7 +33,7 @@ int	nbargs(char *str)
 	return (n);
 }
 
-int	putarg(va_list ap, char c, int fd)
+static int	putarg(va_list ap, char c, int fd)
 {
 	if (c == 'c')
 		return (ft_putchar_fd(va_arg(ap, int), fd));
@@ -58,7 +58,7 @@ int	putarg(va_list ap, char c, int fd)
 	return (-1);
 }
 
-int	check_ret(int ret, int wrote)
+static int	check_ret(int ret, int wrote)
 {
 	if (wrote != -1)
 		return (ret + wrote);
