@@ -14,10 +14,16 @@
 
 int	ft_countlines(int fd)
 {
-	int	i;
+	int		i;
+	char	*line;
 
 	i = 0;
-	while (get_next_line(fd))
+	line = get_next_line(fd);
+	while (line)
+	{
 		i++;
+		free(line);
+		line = get_next_line(fd);
+	}
 	return (i);
 }
