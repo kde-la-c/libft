@@ -64,6 +64,8 @@ SRC			= ft_isalnum.c\
 			ft_atol.c\
 			ft_mathei.c\
 			ft_strjoin_f1.c\
+			ft_strjoin_f2.c\
+			ft_strjoin_f12.c\
 			ft_setcords.c\
 			\
 			get_next_line.c\
