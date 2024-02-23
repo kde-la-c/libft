@@ -1,24 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_mathei.c                                        :+:      :+:    :+:   */
+/*   ft_dnfree.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kde-la-c <kde-la-c@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/07/26 23:04:43 by kde-la-c          #+#    #+#             */
-/*   Updated: 2023/07/26 23:05:03 by kde-la-c         ###   ########.fr       */
+/*   Created: 2024/02/23 02:07:54 by kde-la-c          #+#    #+#             */
+/*   Updated: 2024/02/23 02:08:57 by kde-la-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+
 #include "libft.h"
 
-/* calculates height of matrix */
-size_t	ft_mathei(void **mat)
+void	ft_dnfree(void **arr, size_t n)
 {
 	size_t	i;
 
 	i = 0;
-	while (mat[i])
-		i++;
-	return (i);
+	while (arr[i] && i < n)
+		free(arr[i++]);
+	free(arr);
 }
