@@ -1,22 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strjoin.c                                       :+:      :+:    :+:   */
+/*   ft_strjoin_f2.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kde-la-c <kde-la-c@student.42madrid>       +#+  +:+       +#+        */
+/*   By: kde-la-c <kde-la-c@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/19 14:49:38 by kde-la-c          #+#    #+#             */
-/*   Updated: 2023/01/19 14:49:43 by kde-la-c         ###   ########.fr       */
+/*   Created: 2023/11/26 19:03:25 by kde-la-c          #+#    #+#             */
+/*   Updated: 2023/11/26 19:03:28 by kde-la-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strjoin(char const *s1, char const *s2)
+char	*ft_strjoin_f2(char const *s1, char const *s2)
 {
 	t_count	c;
-	char	*ret;
 	size_t	totlen;
+	char	*ret;
 
 	if (!s1 || !s2)
 		return (NULL);
@@ -36,5 +36,6 @@ char	*ft_strjoin(char const *s1, char const *s2)
 		c.j++;
 	}
 	ret[c.i + c.j] = 0;
+	free((void *)s2);
 	return (ret);
 }

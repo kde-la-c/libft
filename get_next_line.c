@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-char	*get_start(char *buff, int *n)
+static char	*get_start(char *buff, int *n)
 {
 	char	*ret;
 	int		nlen;
@@ -30,7 +30,7 @@ char	*get_start(char *buff, int *n)
 	return (ret);
 }
 
-char	*read_line(char *buff, int fd, int *n)
+static char	*read_line(char *buff, int fd, int *n)
 {
 	char		*ret;
 	char		*tmp;

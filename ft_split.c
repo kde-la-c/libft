@@ -35,10 +35,12 @@ char	**ft_split(char const *s, char c)
 	int		j;
 	char	**ret;
 
+	if (!s)
+		return (NULL);
 	i = 0;
 	j = 0;
 	ret = malloc(sizeof(char *) * (countsubstr(s, c) + 1));
-	if (!ret || !s)
+	if (!ret)
 		return (NULL);
 	while (i < countsubstr(s, c))
 	{

@@ -109,6 +109,9 @@ int		ft_countlines(int fd);
 long	ft_atol(const char *str);
 size_t	ft_mathei(void **mat);
 char	*ft_strjoin_f1(char const *s1, char const *s2);
+char	*ft_strjoin_f2(char const *s1, char const *s2);
+char	*ft_strjoin_f12(char const *s1, char const *s2);
+t_cords	ft_setcords(int r, int c);
 void	ft_dnfree(void **arr, size_t n);
 
 char	*get_next_line(int fd);

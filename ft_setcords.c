@@ -1,40 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strjoin.c                                       :+:      :+:    :+:   */
+/*   ft_setcords.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kde-la-c <kde-la-c@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/19 14:49:38 by kde-la-c          #+#    #+#             */
-/*   Updated: 2023/01/19 14:49:43 by kde-la-c         ###   ########.fr       */
+/*   Created: 2023/11/18 03:01:46 by kde-la-c          #+#    #+#             */
+/*   Updated: 2023/11/18 03:01:49 by kde-la-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strjoin(char const *s1, char const *s2)
+t_cords	ft_setcords(int r, int c)
 {
-	t_count	c;
-	char	*ret;
-	size_t	totlen;
+	t_cords	ret;
 
-	if (!s1 || !s2)
-		return (NULL);
-	ft_bzero((void *)&c, sizeof(t_count));
-	totlen = ft_strlen(s1) + ft_strlen(s2);
-	ret = malloc(sizeof(char) * totlen + 1);
-	if (!ret)
-		return (NULL);
-	while (s1[c.i])
-	{
-		ret[c.i] = s1[c.i];
-		c.i++;
-	}
-	while (s2[c.j])
-	{
-		ret[c.i + c.j] = s2[c.j];
-		c.j++;
-	}
-	ret[c.i + c.j] = 0;
+	ret.r = r;
+	ret.c = c;
 	return (ret);
 }
