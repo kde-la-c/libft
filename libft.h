@@ -113,6 +113,7 @@ char	*ft_strjoin_f2(char const *s1, char const *s2);
 char	*ft_strjoin_f12(char const *s1, char const *s2);
 t_cords	ft_setcords(int r, int c);
 void	ft_dnfree(void **arr, size_t n);
+int		ft_countchr(char *str, char ch);
 
 char	*get_next_line(int fd);
 

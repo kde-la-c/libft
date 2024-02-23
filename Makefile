@@ -68,6 +68,7 @@ SRC			= ft_isalnum.c\
 			ft_strjoin_f12.c\
 			ft_setcords.c\
 			ft_dnfree.c\
+			ft_countchr.c\
 			\
 			get_next_line.c\
 			\
