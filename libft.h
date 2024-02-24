@@ -114,6 +114,7 @@ char	*ft_strjoin_f12(char const *s1, char const *s2);
 t_cords	ft_setcords(int r, int c);
 void	ft_dnfree(void **arr, size_t n);
 int		ft_countchr(char *str, char ch);
+int		ft_putmatrix_fd(char **mat, int fd);
 
 char	*get_next_line(int fd);
 
