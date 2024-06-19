@@ -81,6 +81,7 @@ OBJS		= $(SRC:%.c=%.o)
 INCLUDE		= libft.h
 CC			= gcc
 CFLAGS		= -Wall -Wextra -Werror
+CFLAGS		+= -fsanitize=address -g3
 AR			= ar
 AFLAGS		= rc
 RM			= rm
