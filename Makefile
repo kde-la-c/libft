@@ -81,8 +81,6 @@ OBJS		= $(SRC:%.c=%.o)
 INCLUDE		= libft.h
 CC			= gcc
 CFLAGS		= -Wall -Wextra -Werror
-# CFLAGS		+= -fsanitize=address -g3
-# CFLAGS		+= -fsanitize=leak -g3
 AR			= ar
 AFLAGS		= rc
 RM			= rm
@@ -93,6 +91,14 @@ all:		$(NAME)
 $(NAME):	$(OBJS) $(INCLUDE)
 			@$(AR) $(AFLAGS) $(NAME) $(OBJS) $(INCLUDE)
 			@echo "\033[0;32m--- Library compiled successfully! ---\033[0m"
+
+asan:		fclean
+asan:		CFLAGS += -fsanitize=address -g3
+asan:		all
+
+lsan:		fclean
+lsan:		CFLAGS += -fsanitize=leak -g3
+lsan:		all
 
 clean:
 			$(RM) $(RFLAGS) $(OBJS)
