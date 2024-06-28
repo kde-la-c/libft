@@ -94,10 +94,12 @@ $(NAME):	$(OBJS) $(INCLUDE)
 
 asan:		fclean
 asan:		CFLAGS += -fsanitize=address -g3
+# asan:		LIBNAME = libft_asan.a
 asan:		all
 
 lsan:		fclean
 lsan:		CFLAGS += -fsanitize=leak -g3
+# lsan:		LIBNAME = libft_lsan.a
 lsan:		all
 
 clean:
