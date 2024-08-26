@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: kde-la-c <kde-la-c@student.42madrid>       +#+  +:+       +#+         #
+#    By: kde-la-c <kde-la-c@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/11 10:57:13 by kde-la-c          #+#    #+#              #
-#    Updated: 2023/02/17 15:15:10 by kde-la-c         ###   ########.fr        #
+#    Updated: 2024/08/26 15:26:38 by kde-la-c         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -90,16 +90,16 @@ all:		$(NAME)
 
 $(NAME):	$(OBJS) $(INCLUDE)
 			@$(AR) $(AFLAGS) $(NAME) $(OBJS) $(INCLUDE)
-			@echo "\033[0;32m--- Library compiled successfully! ---\033[0m"
+			@echo "\033[0;32m--- $(NAME) compiled successfully! ---\033[0m"
 
 asan:		fclean
+asan:		NAME = libft_asan.a
 asan:		CFLAGS += -fsanitize=address -g3
-# asan:		LIBNAME = libft_asan.a
 asan:		all
 
 lsan:		fclean
+lsan:		NAME = libft_lsan.a
 lsan:		CFLAGS += -fsanitize=leak -g3
-# lsan:		LIBNAME = libft_lsan.a
 lsan:		all
 
 clean:
