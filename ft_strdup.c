@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kde-la-c <kde-la-c@student.42madrid>       +#+  +:+       +#+        */
+/*   By: kde-la-c <kde-la-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/17 01:31:15 by kde-la-c          #+#    #+#             */
-/*   Updated: 2023/01/17 01:31:18 by kde-la-c         ###   ########.fr       */
+/*   Updated: 2024/08/30 21:48:29 by kde-la-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ char	*ft_strdup(const char *s1)
 	char	*ret;
 
 	i = 0;
+	if (!s1)
+		return (NULL);
 	ret = malloc(sizeof(char) * (ft_strlen(s1) + 1));
 	if (!ret)
 		return (NULL);

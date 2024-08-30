@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_dfree.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kde-la-c <kde-la-c@student.42madrid.com>   +#+  +:+       +#+        */
+/*   By: kde-la-c <kde-la-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/13 17:57:54 by kde-la-c          #+#    #+#             */
-/*   Updated: 2023/05/13 17:57:56 by kde-la-c         ###   ########.fr       */
+/*   Updated: 2024/08/30 21:55:38 by kde-la-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ void	ft_dfree(void **arr)
 {
 	int	i;
 
+	if (!arr)
+		return ;
 	i = 0;
 	while (arr[i])
 		free(arr[i++]);
