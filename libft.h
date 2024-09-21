@@ -25,6 +25,12 @@
 #  define BUFFER_SIZE 1
 # endif
 
+typedef enum e_bool
+{
+	FALSE,
+	TRUE
+}	t_bool;
+
 typedef struct s_list
 {
 	void			*content;
