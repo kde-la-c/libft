@@ -70,6 +70,7 @@ SRC			= ft_isalnum.c\
 			ft_dnfree.c\
 			ft_countchr.c\
 			ft_putmatrix_fd.c\
+			ft_matdup.c\
 			\
 			get_next_line.c\
 			\
