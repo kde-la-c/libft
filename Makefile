@@ -79,7 +79,7 @@ SRC			= ft_isalnum.c\
 			ft_fdprintf.c
 OBJS		= $(SRC:%.c=%.o)
 INCLUDE		= libft.h
-CC			= gcc
+CC			= cc
 CFLAGS		= -Wall -Wextra -Werror -g3
 AR			= ar
 AFLAGS		= rc
