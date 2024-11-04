@@ -31,4 +31,3 @@ char	**ft_matdup(void **mat)
 	}
 	return (ret);
 }
-
