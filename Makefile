@@ -81,7 +81,7 @@ SRC			= ft_isalnum.c\
 OBJS		= $(SRC:%.c=%.o)
 INCLUDE		= libft.h
 CC			= cc
-CFLAGS		= -Wall -Wextra -Werror -g3
+CFLAGS		= -Wall -Wextra -Werror
 AR			= ar
 AFLAGS		= rc
 RM			= rm
@@ -95,12 +95,12 @@ $(NAME):	$(OBJS) $(INCLUDE)
 
 asan:		fclean
 asan:		NAME = libft_asan.a
-asan:		CFLAGS += -fsanitize=address
+asan:		CFLAGS += -fsanitize=address -g3
 asan:		all
 
 lsan:		fclean
 lsan:		NAME = libft_lsan.a
-lsan:		CFLAGS += -fsanitize=leak
+lsan:		CFLAGS += -fsanitize=leak -g3
 lsan:		all
 
 clean:
