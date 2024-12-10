@@ -71,6 +71,7 @@ SRC			= ft_isalnum.c			\
 			ft_countchr.c			\
 			ft_putmatrix_fd.c		\
 			ft_matdup.c				\
+			ft_atof.c				\
 									\
 			get_next_line.c			\
 									\

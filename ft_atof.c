@@ -12,36 +12,27 @@
 
 #include "libft.h"
 
-float	ft_atof(const char *str)
+double	ft_atof(char *str)
 {
-	int		sign;
+	double	sign;
 	int		i;
-	int		int_part;
-	float	ret;
-	float	dividend;
+	double	ret;
+	double	dividend;
 
-	dividend = 0.1;
+	dividend = 0.1f;
 	i = 0;
-	ret = 0;
-	ret += ft_atoi(str);
-	while ((((str[i] >= 9 && str[i] <= 13) || str[i] == 32) && str[i]) || \
-		(str[i] >= 48 && str[i] <= 57))
-		i++;
-	if (str[i] == '.')
-		i++;
-	if (!ft_isdigit(str[i]))
+	ret = (double)ft_atoi(str);
+	sign = -1 + ((ret >= 0) * 2);
+	if (ret < 0)
+		ret *= -1.0f;
+	str = ft_strchr(str, '.');
+	if (!str)
 		return (ret);
+	i++;
 	while (str[i] >= 48 && str[i] <= 57)
 	{
-		ret += ((str[i] - 48) * dividend);
-		dividend *= 0.1;
-		i++;
+		ret += ((str[i++] - 48) * dividend);
+		dividend *= 0.1f;
 	}
-	return (ret);
-}
-
-int main()
-{
-	char *str = "-0.0182";
-	printf("%f\n%f\n", atof(str), ft_atof(str));
+	return ((double)(ret * sign));
 }
