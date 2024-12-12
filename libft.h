@@ -122,7 +122,7 @@ void	ft_dnfree(void **arr, size_t n);
 int		ft_countchr(char *str, char ch);
 int		ft_putmatrix_fd(char **mat, int fd);
 char	**ft_matdup(void **mat);
-double	ft_atof(char *str);
+double	ft_atof(const char *str);
 
 char	*get_next_line(int fd);
 
